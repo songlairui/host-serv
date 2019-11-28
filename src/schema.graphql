@@ -1,0 +1,23 @@
+type Query {
+  workspaces: [Workspace]
+  workspace(id: ID!): Workspace
+}
+
+# type Mutation {
+#   # createDraft(title: String!, content: String!): Post!
+#   # publish(id: ID!): Post!
+#   # deletePost(id: ID!): Post!
+# }
+
+# type Subscription {
+#   # feedSubscription: Post
+# }
+
+type WorkspaceFolder {
+  name: String
+  path: String!
+}
+type Workspace {
+  id: String!
+  folders: [WorkspaceFolder]
+}

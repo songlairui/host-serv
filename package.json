@@ -1,0 +1,23 @@
+{
+  "name": "graphql-boilerplate",
+  "scripts": {
+    "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
+    "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
+    "build": "rimraf dist && tsc"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/lowdb": "^1.0.9",
+    "fs-extra": "^8.1.0",
+    "graphql-yoga": "1.18.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.14",
+    "dotenv-cli": "3.1.0",
+    "nodemon": "2.0.1",
+    "rimraf": "3.0.0",
+    "ts-node": "8.5.2",
+    "typescript": "3.7.2"
+  }
+}
