@@ -3,13 +3,15 @@ import { openTmuxWithPanes, killTmuxSession } from "../../connectors/tmux";
 export default {
   async openTmux(
     parent,
-    { name, force, n }: { name: string; force?: boolean; n?: string },
+    {
+      name,
+      force,
+      new: _new
+    }: { name: string; force?: boolean; new?: boolean },
     info
   ) {
-    const success = await openTmuxWithPanes(name, force, n);
-    console.info("success", success, "open");
     return {
-      success
+      success: await openTmuxWithPanes(name, force, _new)
     };
   },
   async killTmux(parent, { name }: { name: string }, info) {

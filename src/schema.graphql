@@ -14,7 +14,7 @@ type CmdResult {
 }
 
 type Mutation {
-  openTmux(name: String!, force: Boolean, n: String): CmdResult
+  openTmux(name: String!, force: Boolean, new: Boolean): CmdResult
   killTmux(name: String!): CmdResult
 }
 

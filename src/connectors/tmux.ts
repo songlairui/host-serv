@@ -1,19 +1,25 @@
 import { openTmux as rawOpen } from "o-tmux/lib/utils";
 
 import { spawn } from "child_process";
-import { resolve } from "path";
+import { resolve, parse } from "path";
 import { vscFolder } from "../utils/paths";
 
 export const openTmuxWithPanes = async function(
   name: string,
   force?: boolean,
-  _n?: string
+  _new?: boolean
 ) {
   if (!name.startsWith("/")) {
     name = resolve(vscFolder, name);
   }
   try {
-    await rawOpen(name, force, _n);
+    let customName: string;
+    if (_new) {
+      const { name: sessionName } = parse(name);
+      customName = String(await genNextSessionId(sessionName));
+      console.info("custom session name", `${sessionName}__${customName}`);
+    }
+    await rawOpen(name, force, customName);
   } catch (error) {
     return false;
   }
@@ -22,7 +28,7 @@ export const openTmuxWithPanes = async function(
   return true;
 };
 
-export const cache: {
+export const tmuxStateCache: {
   sessions: string[];
   p: Promise<string[]> | null;
 } = {
@@ -30,16 +36,29 @@ export const cache: {
   p: null
 };
 
+export const genNextSessionId = async function(
+  sessionName: string
+): Promise<number> {
+  const lastSessionName = (await listTmuxSession())
+    .filter(item => item.startsWith(`${sessionName}__`))
+    .pop();
+
+  if (!lastSessionName) {
+    return 1;
+  }
+  return 1 + (parseInt(lastSessionName.split(/__+/)[1]) || 1);
+};
+
 export const listTmuxSession = async function(noCache = false) {
-  if (!cache.sessions.length) {
+  if (!tmuxStateCache.sessions.length) {
     noCache = true;
   }
   if (!noCache) {
-    return cache.sessions;
+    return tmuxStateCache.sessions;
   }
-  if (!cache.p) {
+  if (!tmuxStateCache.p) {
     const ls = spawn("tmux", ["list-session", "-F", "#{session_name}"]);
-    cache.p = new Promise<string[]>((r, j) => {
+    tmuxStateCache.p = new Promise<string[]>((r, j) => {
       let chunks = "";
       let error = "";
       ls.stdout.on("data", data => {
@@ -61,9 +80,9 @@ export const listTmuxSession = async function(noCache = false) {
     });
   }
 
-  const result = await cache.p;
-  cache.sessions = result;
-  cache.p = null;
+  const result = await tmuxStateCache.p;
+  tmuxStateCache.sessions = result;
+  tmuxStateCache.p = null;
   return result;
 };
 
