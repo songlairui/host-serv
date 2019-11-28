@@ -4,7 +4,7 @@ type Query {
 }
 
 type Mutation {
-  openTmux(name: String!, force: Boolean): Boolean
+  openTmux(name: String!, force: Boolean, new: Boolean): Boolean
 }
 
 # type Subscription {

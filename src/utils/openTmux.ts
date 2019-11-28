@@ -4,9 +4,18 @@ import { resolve } from "path";
 
 import { vscFolder } from "./paths";
 
-export const openTmuxWithPanes = function(name: string, force?: boolean) {
+export const openTmuxWithPanes = function(
+  name: string,
+  force?: boolean,
+  _new?: boolean
+) {
   if (!name.startsWith("/")) {
     name = resolve(vscFolder, name);
   }
-  return rawOpen(name, force);
+  try {
+    rawOpen(name, force, _new);
+  } catch (error) {
+    return false;
+  }
+  return true;
 };
