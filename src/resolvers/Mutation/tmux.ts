@@ -1,8 +1,4 @@
-import {
-  openTmuxWithPanes,
-  listTmuxSession,
-  killTmuxSession
-} from "../../connectors/tmux";
+import { openTmuxWithPanes, killTmuxSession } from "../../connectors/tmux";
 
 export default {
   async openTmux(
@@ -11,21 +7,16 @@ export default {
     info
   ) {
     const success = await openTmuxWithPanes(name, force, n);
+    console.info("success", success, "open");
     return {
-      success,
-      state: {
-        sessions: await listTmuxSession(true)
-      }
+      success
     };
   },
   async killTmux(parent, { name }: { name: string }, info) {
     const [err, result, code] = await killTmuxSession(name);
     console.info("kill session", code, result, err);
     return {
-      success: !err,
-      state: {
-        sessions: await listTmuxSession(true)
-      }
+      success: !err
     };
   }
 };

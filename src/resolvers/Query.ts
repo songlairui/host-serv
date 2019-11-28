@@ -12,8 +12,6 @@ export const Query = {
   },
 
   async current(parent, { force }, ctx: Context) {
-    return {
-      sessions: await listTmuxSession(force)
-    };
+    return { success: force };
   }
 };

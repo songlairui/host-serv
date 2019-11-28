@@ -5,7 +5,7 @@ type CurrentState {
 type Query {
   workspaces: [Workspace]
   workspace(id: ID!): Workspace
-  current(force: Boolean): CurrentState
+  current(force: Boolean): CmdResult
 }
 
 type CmdResult {

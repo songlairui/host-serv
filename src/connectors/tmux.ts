@@ -4,19 +4,21 @@ import { spawn } from "child_process";
 import { resolve } from "path";
 import { vscFolder } from "../utils/paths";
 
-export const openTmuxWithPanes = function(
+export const openTmuxWithPanes = async function(
   name: string,
   force?: boolean,
-  _new?: string
+  _n?: string
 ) {
   if (!name.startsWith("/")) {
     name = resolve(vscFolder, name);
   }
   try {
-    rawOpen(name, force, _new);
+    await rawOpen(name, force, _n);
   } catch (error) {
     return false;
   }
+  // TODO tmux new 与 osascript 分离
+  await new Promise(r => setTimeout(r, 400));
   return true;
 };
 
