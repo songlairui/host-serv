@@ -1,13 +1,13 @@
 import { Query } from "./Query";
 // import { Subscription } from "./Subscription";
-import command from "./Mutation/command";
+import tmux from "./Mutation/tmux";
 // import { User } from "./User";
 // import { Post } from "./Post";
 
 export default {
   Query,
   Mutation: {
-    ...command
+    ...tmux
   }
   // Subscription,
   // User,
