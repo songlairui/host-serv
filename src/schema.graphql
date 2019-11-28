@@ -3,11 +3,9 @@ type Query {
   workspace(id: ID!): Workspace
 }
 
-# type Mutation {
-#   # createDraft(title: String!, content: String!): Post!
-#   # publish(id: ID!): Post!
-#   # deletePost(id: ID!): Post!
-# }
+type Mutation {
+  openTmux(name: String!, force: Boolean): Boolean
+}
 
 # type Subscription {
 #   # feedSubscription: Post

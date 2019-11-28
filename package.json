@@ -1,5 +1,5 @@
 {
-  "name": "graphql-boilerplate",
+  "name": "serv-workspaces",
   "scripts": {
     "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
@@ -10,7 +10,8 @@
     "@types/lowdb": "^1.0.9",
     "fs-extra": "^8.1.0",
     "graphql-yoga": "1.18.3",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "o-tmux": "^0.1.2"
   },
   "devDependencies": {
     "@types/node": "12.12.14",

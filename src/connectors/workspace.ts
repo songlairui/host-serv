@@ -1,22 +1,11 @@
-import { homedir } from "os";
-import { readdir, pathExists, mkdirp, readFile } from "fs-extra";
+import { readdir, readFile } from "fs-extra";
 import { resolve, parse } from "path";
 import { Workspace } from "../interface";
-
-const targetFolder = resolve(homedir(), "_vsc-workspaces");
-
-async function checkPath(targetFolder) {
-  if (!(await pathExists(targetFolder))) {
-    console.info(`创建文件夹: ${targetFolder}`);
-    await mkdirp(targetFolder);
-  }
-}
-//
-checkPath(targetFolder);
+import { vscFolder } from "../utils/paths";
 
 const getWorkspaceDetail = async function(shortname: string) {
   const { dir, name } = parse(shortname);
-  const targetFile = resolve(targetFolder, dir, `${name}.code-workspace`);
+  const targetFile = resolve(vscFolder, dir, `${name}.code-workspace`);
   const { folders, settings } = JSON.parse(
     (await readFile(targetFile)).toString()
   );
@@ -28,7 +17,7 @@ const getWorkspaceDetail = async function(shortname: string) {
 };
 
 export const list = async function() {
-  const files = (await readdir(targetFolder)).filter(item =>
+  const files = (await readdir(vscFolder)).filter(item =>
     item.endsWith(".code-workspace")
   );
 

@@ -1,4 +1,7 @@
 import { GraphQLServer } from "graphql-yoga";
+
+import "./utils/_init";
+
 import resolvers from "./resolvers";
 import db from "./utils/db";
 
