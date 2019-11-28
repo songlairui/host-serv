@@ -23,7 +23,6 @@ export const list = async function() {
 
   return Promise.all(
     files.map(async file => ({
-      id: file.slice(0, file.length - ".code-workspace".length),
       ...(await getWorkspaceDetail(file))
     }))
   );

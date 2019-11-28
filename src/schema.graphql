@@ -1,10 +1,21 @@
+type CurrentState {
+  sessions: [String]
+}
+
 type Query {
   workspaces: [Workspace]
   workspace(id: ID!): Workspace
+  current(force: Boolean): CurrentState
+}
+
+type CmdResult {
+  success: Boolean
+  state: CurrentState
 }
 
 type Mutation {
-  openTmux(name: String!, force: Boolean, new: Boolean): Boolean
+  openTmux(name: String!, force: Boolean, n: String): CmdResult
+  killTmux(name: String!): CmdResult
 }
 
 # type Subscription {
