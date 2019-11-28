@@ -1074,14 +1074,10 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@4:
+lodash@4, lodash@^4.17.4:
   version "4.17.15"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.15.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
-
-lodash@^4.17.4:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 lowdb@^1.0.0:
   version "1.0.0"
@@ -1196,9 +1192,9 @@ npm-run-path@^2.0.0:
   dependencies:
     path-key "^2.0.0"
 
-o-tmux@^0.1.2:
+o-tmux@^0.1.5:
   version "0.1.5"
-  resolved "https://registry.npmjs.org/o-tmux/-/o-tmux-0.1.5.tgz#f6f56f8cf811c2ea0d0d462ee350c6de8d3d64d1"
+  resolved "https://registry.yarnpkg.com/o-tmux/-/o-tmux-0.1.5.tgz#f6f56f8cf811c2ea0d0d462ee350c6de8d3d64d1"
   integrity sha512-osDle4thNleXHxrSR7TUlCyNRag3E+KF/DHFgaL/333WtRIaiD2Ah16G3SkTq/tUDNuVN04hJvVK77OtM/4nRg==
   dependencies:
     "@oclif/command" "^1"
@@ -1560,10 +1556,10 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
-ts-node@8.5.2:
-  version "8.5.2"
-  resolved "https://registry.npm.taobao.org/ts-node/download/ts-node-8.5.2.tgz?cache=0&sync_timestamp=1573786979471&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-node%2Fdownload%2Fts-node-8.5.2.tgz#434f6c893bafe501a30b32ac94ee36809ba2adce"
-  integrity sha1-Q09siTuv5QGjCzKslO42gJuirc4=
+ts-node@8.5.3:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.5.3.tgz#f0bcacbfda8a70188f3a5c561b2dab546cb0abbb"
+  integrity sha512-B4dYs62o9ioIilzh7Npby5grYvw3lLwttTSIzf7QObf1FWUCzt+ELtyZJd+xYgxJ/n3A5nQJ2oG6VaZgwMMcjA==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
