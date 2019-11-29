@@ -23,8 +23,6 @@ export const openTmuxWithPanes = async function(
   } catch (error) {
     return false;
   }
-  // TODO tmux new 与 osascript 分离
-  await new Promise(r => setTimeout(r, 400));
   return true;
 };
 

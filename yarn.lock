@@ -1257,9 +1257,9 @@ npm-run-path@^4.0.0:
     path-key "^3.0.0"
 
 o-tmux@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/o-tmux/-/o-tmux-0.1.5.tgz#f6f56f8cf811c2ea0d0d462ee350c6de8d3d64d1"
-  integrity sha512-osDle4thNleXHxrSR7TUlCyNRag3E+KF/DHFgaL/333WtRIaiD2Ah16G3SkTq/tUDNuVN04hJvVK77OtM/4nRg==
+  version "0.1.7"
+  resolved "https://registry.npmjs.org/o-tmux/-/o-tmux-0.1.7.tgz#aabfea0c3d2b281112d2aa24dc9df58cba4522e6"
+  integrity sha512-BxDa2lp1n6AQrKxxVX5wOMFOlYYaZAHtlKPslxk9zu5RpyFI31z5op8oPfeVH/CWG+ghNXijAh4wm+yx4WOT2w==
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"

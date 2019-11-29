@@ -12,7 +12,7 @@
     "fs-extra": "^8.1.0",
     "graphql-yoga": "1.18.3",
     "lowdb": "^1.0.0",
-    "o-tmux": "^0.1.5"
+    "o-tmux": "^0.1.7"
   },
   "devDependencies": {
     "@types/execa": "^2.0.0",
@@ -20,7 +20,7 @@
     "dotenv-cli": "3.1.0",
     "nodemon": "2.0.1",
     "rimraf": "3.0.0",
-    "ts-node": "8.5.3",
+    "ts-node": "8.5.4",
     "typescript": "3.7.2"
   }
 }
