@@ -14,6 +14,7 @@ type CmdResult {
 }
 
 type Mutation {
+  launchVsc(name: String!): Boolean
   openTmux(name: String!, force: Boolean, new: Boolean): CmdResult
   killTmux(name: String!): CmdResult
 }

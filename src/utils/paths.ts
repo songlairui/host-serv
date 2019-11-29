@@ -3,6 +3,7 @@ import { resolve } from "path";
 import { pathExists, mkdirp } from "fs-extra";
 
 export const vscFolder = resolve(homedir(), "_vsc-workspaces");
+export const _SUFFIX = ".code-workspace";
 
 export async function checkPath(targetFolder) {
   if (!(await pathExists(targetFolder))) {
@@ -10,4 +11,3 @@ export async function checkPath(targetFolder) {
     await mkdirp(targetFolder);
   }
 }
-
