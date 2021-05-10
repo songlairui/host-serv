@@ -1122,9 +1122,9 @@ lodash.templatesettings@^4.0.0:
     lodash._reinterpolate "^3.0.0"
 
 lodash@4, lodash@^4.17.4:
-  version "4.17.15"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lowdb@^1.0.0:
   version "1.0.0"
@@ -1256,9 +1256,9 @@ npm-run-path@^4.0.0:
   dependencies:
     path-key "^3.0.0"
 
-o-tmux@^0.1.5:
+o-tmux@^0.1.7:
   version "0.1.7"
-  resolved "https://registry.npmjs.org/o-tmux/-/o-tmux-0.1.7.tgz#aabfea0c3d2b281112d2aa24dc9df58cba4522e6"
+  resolved "https://registry.yarnpkg.com/o-tmux/-/o-tmux-0.1.7.tgz#aabfea0c3d2b281112d2aa24dc9df58cba4522e6"
   integrity sha512-BxDa2lp1n6AQrKxxVX5wOMFOlYYaZAHtlKPslxk9zu5RpyFI31z5op8oPfeVH/CWG+ghNXijAh4wm+yx4WOT2w==
   dependencies:
     "@oclif/command" "^1"
@@ -1645,10 +1645,10 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
-ts-node@8.5.3:
-  version "8.5.3"
-  resolved "https://registry.npmjs.org/ts-node/-/ts-node-8.5.3.tgz#f0bcacbfda8a70188f3a5c561b2dab546cb0abbb"
-  integrity sha512-B4dYs62o9ioIilzh7Npby5grYvw3lLwttTSIzf7QObf1FWUCzt+ELtyZJd+xYgxJ/n3A5nQJ2oG6VaZgwMMcjA==
+ts-node@8.5.4:
+  version "8.5.4"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.5.4.tgz#a152add11fa19c221d0b48962c210cf467262ab2"
+  integrity sha512-izbVCRV68EasEPQ8MSIGBNK9dc/4sYJJKYA+IarMQct1RtEot6Xp0bXuClsbUSnKpg50ho+aOAx8en5c+y4OFw==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
